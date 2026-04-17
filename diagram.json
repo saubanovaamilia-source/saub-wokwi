@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "author": "Амилия Саубанова",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": -157,
+      "left": 240,
+      "attrs": { "color": "grey", "xray": "1" }
+    },
+    {
+      "type": "wokwi-lcd2004",
+      "id": "lcd1",
+      "top": -358.4,
+      "left": 130.4,
+      "attrs": { "pins": "i2c" }
+    }
+  ],
+  "connections": [
+    [ "lcd1:GND", "uno:GND.1", "black", [ "h0" ] ],
+    [ "lcd1:VCC", "uno:5V", "red", [ "h-144", "v528.1", "h172.8" ] ],
+    [ "btn1:2.r", "uno:GND.3", "black", [ "h0.2", "v336.2", "h-109" ] ],
+    [ "lcd1:SDA", "uno:A4.2", "gray", [ "h0" ] ],
+    [ "lcd1:SCL", "uno:A5.2", "gray", [ "h0" ] ],
+    [ "btn1:1.l", "uno:2", "gray", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
